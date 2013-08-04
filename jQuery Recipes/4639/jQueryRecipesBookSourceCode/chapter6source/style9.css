@@ -1,0 +1,11 @@
+#scroller {
+height: 250px;
+width: 230px;
+overflow:hidden;
+position: relative;
+margin:auto;
+border:2px solid ; 
+padding:10px;
+}
+
+#scroller p {font-weight:bold;position:relative;}

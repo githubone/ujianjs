@@ -1,0 +1,1 @@
+$('.features').addClass('highlight');

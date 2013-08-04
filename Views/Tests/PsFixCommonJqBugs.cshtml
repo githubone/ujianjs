@@ -1,0 +1,60 @@
+﻿  @{
+      Layout = "_TestLayout.cshtml";
+}
+
+<script>
+    $(function () {
+        // ref: G:\program2\jshtml\pluralsight\fixing-common-jquery-bugs\m1-core-exercise-files\after
+        module("common bugs", {
+            setup: function(){
+                console.log("set up");
+            }
+        });
+
+        test("chaining promise with apply", function () {
+            var promises = [
+                $.getJSON('/contacts.js')
+            ];
+
+        //    $.when.apply($, promises).then(
+        //        function (xhr) {
+        //            ok(xhr);
+        //        }
+            //    );
+
+            $.when({ test : 1 }).done(
+                ok(true, 'one argument passed. treated as resolved deferred')
+            );
+
+            $.when({ test: 1 }, { test: 2 }).done(
+                    ok(true, '2 arguments/processes expect to succeed with done')
+                );
+            
+            $.when({ test: 1 }, { test: 2 }).then(
+                function (arg) {
+                    ok(true, '2 processes succeeds');
+                },
+                
+                function(arg) {
+                    ok(true, 'one or both processess failed');
+                }
+            
+            );
+            
+            $.when($.ajax('test.aspx')).then(
+                // success
+                function (xhr) {
+                    ok(true, 'deferred object pass');
+                },
+                function (err) {
+                    ok(true, 'ajax call fails');
+                    notEqual(err,null,'expect err object returne')
+                }
+               
+               );
+        }
+        );
+       
+    });
+
+</script>

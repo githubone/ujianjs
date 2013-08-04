@@ -1,0 +1,13 @@
+.buttons{
+width: 100px; 
+float: left;
+text-align: center; 
+margin: 5px; 
+border: 2px solid;
+font-weight:bold;
+}
+.hover{
+cursor: crosshair; 
+color: blue ; 
+background-color:cyan
+}

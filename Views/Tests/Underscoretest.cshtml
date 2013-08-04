@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "_TestLayout.cshtml";
+}
+
+
+<script>
+    $(function () {
+
+       
+        module("underscore collections test", {
+            setup: function () {
+                // append test elements to qunit-fixture
+                var fixture = $('#qunit-fixture');
+                var elementsToAdd = '<div id="map-test"><div id="id1"/><div id="id2"/></div>';
+                fixture.append(elementsToAdd);
+            }
+        });
+
+        test("_first", function () {
+            equal(_.first([1, 2, 3]), 1, 'can pull out the first element of an array');
+        });
+
+        test("_each", function () {
+            var answers = [];
+            // use _each to interate array and muliply each item by mulitiplier 5
+            _.each([1, 2, 3], function (item) {
+
+                answers.push(item * this.multiplier);
+            },
+            {
+                multiplier: 5
+            });
+
+            // verify
+            equal(answers.join(','), "5,10,15", "context property accessed")
+
+        });
+
+
+        test('_map', function () {
+            // get node list of elements with id containing map-test
+            var nodelist = document.querySelectorAll('#map-test * ');
+            // can map on nodelist
+            // note: from item can accessed attribute in element <div id="id1"/>
+            var idslist = _.map(nodelist, function (item) {
+                return item.id;
+            });
+
+            // verify node item accessed and mapped based on action function
+            deepEqual(idslist, ['id1', 'id2']);
+
+
+        });
+
+
+        test('_find', function () {
+            var array = [1, 2, 3]
+            var foundItem = _.find(array, function (x) {
+                return x > 1;
+            });
+
+            equal(foundItem, 2, 'should return first found item');
+
+        });
+
+
+        test('_reduce', function () {
+            var array = [1, 2, 3];
+
+            var sum = _.reduce(array, function (sum, num) {
+                return sum + num;
+            });
+            equal(sum, 6, 'sum of all numbers in the array should be 6');
+            var array = [1, 2, 3,4];
+
+            var prod = _.reduce(array, function (prod, num) {
+                return prod * num;
+            });
+
+            equal(prod, 24, 'product of all numbers in the array should be 24');
+        });
+
+       
+        
+
+    });
+</script>

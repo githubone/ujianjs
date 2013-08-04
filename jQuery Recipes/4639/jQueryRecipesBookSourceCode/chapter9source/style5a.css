@@ -1,0 +1,7 @@
+.label {float: left; width: 120px; } 
+.usrinfo {width: 200px; } 
+.emailinfo {width: 200px; } 
+.usrerror { color: red; padding-left: 10px; } 
+.emailerror { color: red; padding-left: 10px; } 
+.submit { margin-left: 125px; margin-top: 10px;} 
+div{padding: 5px; }

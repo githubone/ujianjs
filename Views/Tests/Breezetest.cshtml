@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "_TestLayout.cshtml";
+}
+
+@*<script>
+  $(function () {
+    
+      module('test data management-breeze')
+
+      test('create breeze manager', function () {
+          var serviceName = 'breeze/BreezeSample',
+          manager = new breeze.EntityManager(serviceName);
+          ok(manager, 'manager created');
+
+      });
+     
+  });
+</script>*@
+
+
+
+ <!-- Initialize QUnit  --> 
+    <script>
+        QUnit.config.autostart = false;
+
+        // global timeout of 20 secs
+        // No test should take that long but first time db build can.
+        QUnit.config.testTimeout = 20000;
+
+        // 'docCode' - the namespace for our tests
+        var docCode = {};
+    </script>
+
+    <!-- Test helper scripts  --> 
+    @*<script src="tests/testFns.js"></script>  <!-- testFns.js must be first -->
+    <script src="tests/testAjaxAdapter.js"></script>
+    <script src="tests/northwindMetadata.js"></script>
+    <script src="tests/northwindTestData.js"></script>
+
+    <!-- Test scripts -->
+    <script src="tests/apiDirectTests.js"></script>
+    <script src="tests/basicTodoTests.js"></script>
+    <script src="tests/dtoTests.js"></script>
+    <script src="tests/entityExtensionTests.js"></script>
+    <script src="tests/entityTests.js"></script>
+    <script src="tests/exportImportTests.js"></script>
+    <script src="tests/inheritanceTests.js"></script>
+    <script src="tests/metadataTests.js"></script>
+    <script src="tests/navigationTests.js"></script>
+    <script src="tests/queryTests.js"></script>
+    <script src="tests/saveConcurrentlyTests.js"></script>
+    <script src="tests/saveTodosTests.js"></script>
+    <script src="tests/saveNorthwindTests.js"></script>
+    <script src="tests/testAjaxAdapterTests.js"></script>
+    <script src="tests/validationTests.js"></script>*@
+
+    <!-- Tests are loaded; let's go! -->
+    <script>
+        QUnit.start(); //Tests loaded, run tests    
+    </script>

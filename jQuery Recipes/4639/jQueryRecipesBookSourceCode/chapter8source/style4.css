@@ -1,0 +1,6 @@
+.label {float: left; width: 120px; } 
+.userid {width: 200px; } 
+.emailadd {width: 200px; } 
+.usrerror { color: red; padding-left: 10px; }
+.emerror { color: red; padding-left: 10px; }
+#submit { margin-left: 125px; margin-top: 10px;}

@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = "_TestLayout.cshtml";
+}
+
+<script>
+
+    /*
+  ======== A Handy Little QUnit Reference ========
+  http://api.qunitjs.com/
+
+  Test methods:
+    module(name, {[setup][ ,teardown]})
+    test(name, callback)
+    expect(numberOfAssertions)
+    stop(increment)
+    start(decrement)
+  Test assertions:
+    ok(value, [message])
+    equal(actual, expected, [message])
+    notEqual(actual, expected, [message])
+    deepEqual(actual, expected, [message])
+    notDeepEqual(actual, expected, [message])
+    strictEqual(actual, expected, [message])
+    notStrictEqual(actual, expected, [message])
+    throws(block, [expected], [message])
+*/
+    $(function () {
+        module("sinont tester", {
+            setup: function () {
+                console.log("setup sinon testing");
+            }
+        });
+
+        test('sinon-spy', function () {
+            var testclass = {
+                callbackfunc: function (cb) {
+                    cb();
+                }
+            }
+
+            var spy = sinon.spy();
+            testclass.callbackfunc(spy);
+            ok(spy.called,"spy acting as callback function should ne called")
+        });
+
+        test('sinon-spy', function () {
+
+            var testclass = {
+                cbreturnvalue: function (cb) {
+                    return cb();
+                }
+            };
+
+            testclassreturnvalue = function() {
+                return 4;
+            };
+
+            var spy = sinon.spy(testclassreturnvalue);
+            var returnvalue = testclass.cbreturnvalue(spy);
+            ok(spy.called, "spy acting as callback function should ne called");
+            equal(returnvalue, 4, "should call real implementation if given a function to spy on");
+
+        });
+
+    });
+
+</script>

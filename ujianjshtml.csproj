@@ -1,0 +1,1119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9568D0EC-E859-4D8D-B262-F3820611E95C}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ujianjshtml</RootNamespace>
+    <AssemblyName>ujianjshtml</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Breeze.WebApi">
+      <HintPath>..\packages\Breeze.WebApi.1.3.5\lib\Breeze.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony">
+      <HintPath>..\packages\Breeze.WebApi.1.3.5\lib\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivator">
+      <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BreezeSampleController.cs" />
+    <Compile Include="Controllers\BreezeSampleShellController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MaveController.cs" />
+    <Compile Include="Controllers\TestsController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\BreezeSampleContext.cs" />
+    <Compile Include="Models\BreezeSampleDatabaseInitializer.cs" />
+    <Compile Include="Models\BreezeSampleTodoItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Start\mavereadme.txt" />
+    <Content Include="Content\breezesample.css" />
+    <Content Include="Content\qunit.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="jQuery Recipes\4639.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source.zip" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\drinkinfo.json" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source.zip" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-1.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-10.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-11.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-11a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-12.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-13.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-14.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-15.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-15a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-16.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-17.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-17a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-17b.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-18.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-18a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-19.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-2.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-20.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-21.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-22.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-23.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-24.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-25.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-26.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-27.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-28.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-2a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-3.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-4.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-5.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\10-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\cell.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\columnfig.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d1.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d10.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d11.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d11a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d11b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d12.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d13.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d14.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d15.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d15a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d16.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d17.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d17a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d17b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d18.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d18a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d18b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d19.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d2.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d20.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d21.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d22.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d23.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d24.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d25.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d26.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d27.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d28.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d2a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d3.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d4.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d5.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\flower.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\image4.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\leftfig.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\rightfig.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\shadowbottom.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\shadowright.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style1.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style10.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style11.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style11a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style11b.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style12.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style13.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style14.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style15.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style2.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style23.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style25.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style26.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style27.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style28.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style2a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style3.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style4.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style5.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style6.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style7.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style8.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter10source\style9.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\1-10.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\1-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\1-6a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\1-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\1-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\1-8a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\1-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d10.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d6a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d7a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d7b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d8a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d8b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\d9a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\style10.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter1source\style9.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-1.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-2.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-3.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-3a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-4.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-4a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-4b.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-5.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-8a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\2-9a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d1.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d1a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d2.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d3.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d3a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d4.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d4a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d4b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d5.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d8a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter2source\d9a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-1.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-10.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-11.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-12.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-13.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-14.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-15.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-16.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-17.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-18.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-19.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-2.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-20.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-21.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-22.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-23.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-3.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-4.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-5.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\3-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\balloon.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\btn1.bmp" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\btn2.bmp" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\btn3.bmp" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\cell.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d1.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d10.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d11.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d11a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d12.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d13.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d14.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d15.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d16.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d17.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d17a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d17b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d18.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d18a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d19.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d1a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d1b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d1c.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d1d.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d2.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d20.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d20a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d20b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d20c.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d20d.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d20e.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d21.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d21a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d22.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d22a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d23.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d3.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d4.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d4a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d4b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d5.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\d9a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style1.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style10.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style11.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style12.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style13.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style14.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style15.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style18.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style2.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style20.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style23.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style3.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style4.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style5.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style7.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter3source\style8.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-1.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-10.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-11.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-12.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-12a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-13.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-14.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-15.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-15a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-16.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-16a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-2.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-3.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-4.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-5.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\4-9a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d1.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d10.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d11.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d12.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d12a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d13.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d14.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d15.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d15a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d16.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d16a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d16b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d2.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d2a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d2b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d3.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d4.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d5.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d7a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\d9a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style1.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style10.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style10a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style10b.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style11.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style12.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style12a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style13.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style15.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style15a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style16.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style16a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style2.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style3.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style7.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style8.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\style9.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter4source\submit.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\5-1.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\5-2.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\5-3.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\5-4.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\5-5.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\5-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\5-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\5-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\5-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\arrow.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d1.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d2.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d3.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d4.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d5.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\d9a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\down.png" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\style1.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\style2.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\style3.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\style4.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\style5.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\style6.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\style7.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\style8.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\style9.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\tabl.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\tablselect.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\tabr.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter5source\tabrselect.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-1.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-10.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-10a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-10b.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-11.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-12.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-13.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-14.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-14a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-14b.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-1a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-2.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-2a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-3.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-3a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-4.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-5.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-6a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-7a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-8a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\6-9a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\a1.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\a2.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\a3.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\a4.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d1.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d10.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d10a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d10b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d11.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d12.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d13.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d14.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d14a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d14b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d14c.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d14d.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d1a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d2.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d2a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d3.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d3a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d4.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d5.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d6a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d7a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d7b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d8a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d8b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d9a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\d9b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\image1.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\image2.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\image3.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\image4.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\image5.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\leftarrow.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\rightarrow.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style10.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style10a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style10b.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style11.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style12.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style13.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style3.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style3a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style4.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style5.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style6.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style7.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style7a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style8.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style9.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter6source\style9a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-1.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-10.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-2.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-2a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-2b.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-2c.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-2d.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-3.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-3a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-4.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-4a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-5.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-5a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-7a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-9a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\7-9b.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d1.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d10.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d2.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d2a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d2b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d2c.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d2d.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d3.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d3a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d4.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d4a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d5.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d5a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d7a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d9a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\d9b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\down.png" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\minus.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\plus.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\style1.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\style10.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\style5.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\style6.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\style7.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\style9.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\style9a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter7source\up.png" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-1.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-1a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-1b.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-2.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-3.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-4.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-4a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-5.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\8-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\autocomplete.php" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\autocompleteForDatabase.php" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d1.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d1a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d1b.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d1c.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d2.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d3.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d4.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d4a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d5.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d6a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d7a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d8a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\getstudrec.php" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\logincheck.php" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\namesinfo.htm" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\student.xml" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\style3.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\style4.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\style5.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\style9.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\validatedata.php" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\validatemail.php" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\validateuser.php" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\welcom.php" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter8source\welcome.php" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-1.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-2.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-3.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-4.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-5.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-5a.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-6.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-7.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-8.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\9-9.html" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\a1.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\a2.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\a3.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\a4.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\cell.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d1.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d2.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d3.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d4.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d5.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d5a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d6.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d6a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d7.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d8.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d8a.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\d9.js" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\image1.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\image2.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\image3.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\image4.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\image5.jpg" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\left.gif" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\right.gif" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\shopcart.JPG" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\style4.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\style5.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\style5a.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\style6.css" />
+    <Content Include="jQuery Recipes\4639\jQueryRecipesBookSourceCode\chapter9source\style7.css" />
+    <Content Include="plug-ins\ajaxget.php" />
+    <Content Include="plug-ins\ajaxpost.php" />
+    <Content Include="plug-ins\ajaxtest.htm" />
+    <Content Include="plug-ins\avatar1.jpg" />
+    <Content Include="plug-ins\avatar2.jpg" />
+    <Content Include="plug-ins\avatar3.jpg" />
+    <Content Include="plug-ins\avatar4.jpg" />
+    <Content Include="plug-ins\ball.png" />
+    <Content Include="plug-ins\bloop.wav" />
+    <Content Include="plug-ins\einstein1.png" />
+    <Content Include="plug-ins\einstein2.png" />
+    <Content Include="plug-ins\example01.htm" />
+    <Content Include="plug-ins\example02.htm" />
+    <Content Include="plug-ins\example03.htm" />
+    <Content Include="plug-ins\example04.htm" />
+    <Content Include="plug-ins\example05.htm" />
+    <Content Include="plug-ins\example06.htm" />
+    <Content Include="plug-ins\example07.htm" />
+    <Content Include="plug-ins\example08.htm" />
+    <Content Include="plug-ins\example09.htm" />
+    <Content Include="plug-ins\example10.htm" />
+    <Content Include="plug-ins\example100.htm" />
+    <Content Include="plug-ins\example101.htm" />
+    <Content Include="plug-ins\example101a.htm" />
+    <Content Include="plug-ins\example11.htm" />
+    <Content Include="plug-ins\example12.htm" />
+    <Content Include="plug-ins\example13.htm" />
+    <Content Include="plug-ins\example14.htm" />
+    <Content Include="plug-ins\example15.htm" />
+    <Content Include="plug-ins\example16.htm" />
+    <Content Include="plug-ins\example17.htm" />
+    <Content Include="plug-ins\example18.htm" />
+    <Content Include="plug-ins\example19.htm" />
+    <Content Include="plug-ins\example20.htm" />
+    <Content Include="plug-ins\example21.htm" />
+    <Content Include="plug-ins\example22.htm" />
+    <Content Include="plug-ins\example23.htm" />
+    <Content Include="plug-ins\example24.htm" />
+    <Content Include="plug-ins\example25.htm" />
+    <Content Include="plug-ins\example26.htm" />
+    <Content Include="plug-ins\example27.htm" />
+    <Content Include="plug-ins\example28.htm" />
+    <Content Include="plug-ins\example29.htm" />
+    <Content Include="plug-ins\example30.htm" />
+    <Content Include="plug-ins\example31.htm" />
+    <Content Include="plug-ins\example32.htm" />
+    <Content Include="plug-ins\example33.htm" />
+    <Content Include="plug-ins\example34.htm" />
+    <Content Include="plug-ins\example35.htm" />
+    <Content Include="plug-ins\example36.htm" />
+    <Content Include="plug-ins\example37.htm" />
+    <Content Include="plug-ins\example38.htm" />
+    <Content Include="plug-ins\example39.htm" />
+    <Content Include="plug-ins\example40.htm" />
+    <Content Include="plug-ins\example41.htm" />
+    <Content Include="plug-ins\example42.htm" />
+    <Content Include="plug-ins\example43.htm" />
+    <Content Include="plug-ins\example44.htm" />
+    <Content Include="plug-ins\example45.htm" />
+    <Content Include="plug-ins\example46.htm" />
+    <Content Include="plug-ins\example47.htm" />
+    <Content Include="plug-ins\example48.htm" />
+    <Content Include="plug-ins\example49.htm" />
+    <Content Include="plug-ins\example50.htm" />
+    <Content Include="plug-ins\example51.htm" />
+    <Content Include="plug-ins\example52.htm" />
+    <Content Include="plug-ins\example53.htm" />
+    <Content Include="plug-ins\example54.htm" />
+    <Content Include="plug-ins\example55.htm" />
+    <Content Include="plug-ins\example56.htm" />
+    <Content Include="plug-ins\example57.htm" />
+    <Content Include="plug-ins\example58.htm" />
+    <Content Include="plug-ins\example59.htm" />
+    <Content Include="plug-ins\example60.htm" />
+    <Content Include="plug-ins\example61.htm" />
+    <Content Include="plug-ins\example62.htm" />
+    <Content Include="plug-ins\example63.htm" />
+    <Content Include="plug-ins\example64.htm" />
+    <Content Include="plug-ins\example65.htm" />
+    <Content Include="plug-ins\example66.htm" />
+    <Content Include="plug-ins\example67.htm" />
+    <Content Include="plug-ins\example68.htm" />
+    <Content Include="plug-ins\example69.htm" />
+    <Content Include="plug-ins\example70.htm" />
+    <Content Include="plug-ins\example71.htm" />
+    <Content Include="plug-ins\example72.htm" />
+    <Content Include="plug-ins\example73.htm" />
+    <Content Include="plug-ins\example74.htm" />
+    <Content Include="plug-ins\example75.htm" />
+    <Content Include="plug-ins\example76.htm" />
+    <Content Include="plug-ins\example77.htm" />
+    <Content Include="plug-ins\example78.htm" />
+    <Content Include="plug-ins\example79.htm" />
+    <Content Include="plug-ins\example80.htm" />
+    <Content Include="plug-ins\example81.htm" />
+    <Content Include="plug-ins\example82.htm" />
+    <Content Include="plug-ins\example83.htm" />
+    <Content Include="plug-ins\example84.htm" />
+    <Content Include="plug-ins\example85.htm" />
+    <Content Include="plug-ins\example86.htm" />
+    <Content Include="plug-ins\example87.htm" />
+    <Content Include="plug-ins\example88.htm" />
+    <Content Include="plug-ins\example89.htm" />
+    <Content Include="plug-ins\example90.htm" />
+    <Content Include="plug-ins\example91.htm" />
+    <Content Include="plug-ins\example92.htm" />
+    <Content Include="plug-ins\example93.htm" />
+    <Content Include="plug-ins\example94.htm" />
+    <Content Include="plug-ins\example95.htm" />
+    <Content Include="plug-ins\example96.htm" />
+    <Content Include="plug-ins\example97.htm" />
+    <Content Include="plug-ins\example98.htm" />
+    <Content Include="plug-ins\example99.htm" />
+    <Content Include="plug-ins\frametest.htm" />
+    <Content Include="plug-ins\ghost.png" />
+    <Content Include="plug-ins\i1.gif" />
+    <Content Include="plug-ins\i1a.gif" />
+    <Content Include="plug-ins\i2.gif" />
+    <Content Include="plug-ins\i3.gif" />
+    <Content Include="plug-ins\i4.gif" />
+    <Content Include="plug-ins\i5.gif" />
+    <Content Include="plug-ins\i6.gif" />
+    <Content Include="plug-ins\instruments.png" />
+    <Content Include="plug-ins\letter.png" />
+    <Content Include="plug-ins\london.png" />
+    <Content Include="plug-ins\mousepointer.gif" />
+    <Content Include="plug-ins\palace.png" />
+    <Content Include="plug-ins\photo1.jpg" />
+    <Content Include="plug-ins\photo2.jpg" />
+    <Content Include="plug-ins\photo3.jpg" />
+    <Content Include="plug-ins\photo4.jpg" />
+    <Content Include="plug-ins\photo5.jpg" />
+    <Content Include="plug-ins\photo6.jpg" />
+    <Content Include="plug-ins\piano.png" />
+    <Content Include="plug-ins\pijsmall.png" />
+    <Content Include="plug-ins\PJ.js" />
+    <Content Include="plug-ins\PJsmall.js" />
+    <Content Include="plug-ins\plan.png" />
+    <Content Include="plug-ins\ship.png" />
+    <Content Include="plug-ins\snowflake.gif" />
+    <None Include="Scripts\breeze.intellisense.js" />
+    <Content Include="Scripts\app\logger.js" />
+    <Content Include="Scripts\app\sampleViewModel.js" />
+    <Content Include="Scripts\breeze.debug.js" />
+    <Content Include="Scripts\breeze.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\lib\store\store.cache.js" />
+    <Content Include="Scripts\lib\store\store2.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\q.js" />
+    <Content Include="Scripts\q.min.js" />
+    <Content Include="Scripts\qunit.js" />
+    <Content Include="Scripts\tests\footest.js" />
+    <Content Include="Scripts\tests\lib\breeze\breeze.js" />
+    <Content Include="Scripts\tests\lib\breeze\readme.txt" />
+    <Content Include="Scripts\tests\lib\breeze\tests\apiDirectTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\basicTodoTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\dtoTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\entityExtensionTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\entityTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\exportImportTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\inheritanceTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\metadataTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\navigationTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\northwindMetadata.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\northwindTestData.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\queryTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\saveConcurrentlyTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\saveNorthwindTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\saveTodosTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\testAjaxAdapter.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\testAjaxAdapterTests.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\testFns.js" />
+    <Content Include="Scripts\tests\lib\breeze\tests\validationTests.js" />
+    <Content Include="Scripts\tests\lib\eagle\eagle.js" />
+    <Content Include="Scripts\tests\lib\store\store.js" />
+    <Content Include="Scripts\tests\test.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
+    <Content Include="Views\Tests\data\testdata.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\BreezeSampleShell\index.cshtml" />
+    <Content Include="Views\Mave\Index.cshtml" />
+    <Content Include="Views\Tests\_PageStart.cshtml" />
+    <Content Include="Views\Tests\_TestLayout.cshtml" />
+    <Content Include="Views\Tests\Index.cshtml" />
+    <Content Include="Views\Tests\Eagletest.cshtml" />
+    <Content Include="Views\Tests\Breezetest.cshtml" />
+    <Content Include="Scripts\underscore.min.map" />
+    <Content Include="Views\Tests\Underscoretest.cshtml" />
+    <Content Include="Views\Tests\PsFixCommonJqBugs.cshtml" />
+    <Content Include="Views\Tests\Htmltest.cshtml" />
+    <Content Include="Views\Tests\Sinontest.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65529/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

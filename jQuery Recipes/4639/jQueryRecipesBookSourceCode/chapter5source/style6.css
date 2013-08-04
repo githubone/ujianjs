@@ -1,0 +1,4 @@
+.mainmenu {float:left; width:200px; list-style-type:none; margin-right:5px;}
+li.mainmenu ul {margin: 0;  } 
+a  {width: 200px;display:block; text-decoration: none; background: #00f;  color: #fff;padding: 0.5em;   border-bottom: 1px solid #fff; }
+ul#dropdownmenu li a:hover {  background: #000;}

@@ -1,0 +1,9 @@
+#scroller {
+  height: 460px;
+  width: 150px;
+  overflow:hidden;
+  position: relative;
+  margin:auto;
+}
+
+#scroller a img { border:0; position:relative;}

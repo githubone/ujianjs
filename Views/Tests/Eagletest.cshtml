@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "_TestLayout.cshtml";
+}
+
+<script>
+  $(function () {
+    
+      module("lib eagle enum models");
+      test("cancellation enum", function () {
+         equal(CancellationChargeTypeEnum.FirstNight, 1, "CancellationChargeTypeEnum.FirstNight should be equal to 1")
+      });
+
+      test("IntegrationType enum", function () {
+          equal(IntegrationTypeEnum.RequestResponse, 2, "IntegrationTypeEnum.RequestResponse should be equal to 2")
+      });
+  });
+</script>
