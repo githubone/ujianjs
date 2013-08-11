@@ -19,7 +19,7 @@
     <script src="http://localhost/eviivo.Eagle.Web.Common/bundles/modernizr"></script>
     <script src="http://localhost/eviivo.Eagle.Web.Common/bundles/sinon"></script>
 
-     
+    <link rel="stylesheet" type="text/css" href="http://localhost/eviivo.Eagle.Web.Common/Content/themes/base/jquery-css" />
 
     @RenderSection("Javascript", false)
     @* Tests are written in the body. *@
@@ -39,9 +39,13 @@
     <h2 id="qunit-userAgent"></h2>
     <ol id="qunit-tests">
     </ol>
-    <p>
+    <div>
         <a href="Index">Back to tests</a>
-    </p>
+         <div id="testsandbox"></div>
+       @* <input id="date" type="text" value="test"/>
+    *@
+    </div>
+   
 </body>
 
 

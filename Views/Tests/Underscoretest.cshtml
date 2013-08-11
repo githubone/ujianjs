@@ -66,13 +66,12 @@
 
         test('_reduce', function () {
             var array = [1, 2, 3];
-
             var sum = _.reduce(array, function (sum, num) {
                 return sum + num;
             });
             equal(sum, 6, 'sum of all numbers in the array should be 6');
-            var array = [1, 2, 3,4];
 
+            var array = [1, 2, 3, 4];
             var prod = _.reduce(array, function (prod, num) {
                 return prod * num;
             });
@@ -80,7 +79,15 @@
             equal(prod, 24, 'product of all numbers in the array should be 24');
         });
 
-       
+        test('include', function () {
+            var result = _.include([1, 2, 3], 2);
+            ok(result, "2 is in the array");
+        });
+
+        test('pluck', function () {
+            var result = _.pluck([{ name: "test1", age: 21 }, { location: "uk", name: "test2" }],"name");
+            equal(result.join(","), "test1,test2");
+        });
         
 
     });

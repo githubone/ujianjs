@@ -1,5 +1,93 @@
 ﻿@{
-    ViewBag.Title = "Jquerytest";
+    Layout = "_TestLayout.cshtml";
 }
 
-<h2>Jquerytest</h2>
+<script>
+    $(function () {
+
+        function testDataTypes($obj) {
+            $.each({
+                  
+            }, function (type, value) {
+                    
+            });
+        }
+        module('jquery tests',
+            {
+                setup: function () {
+                    console.log("jquery unit tests ");
+                }
+            });
+
+        test('data-,removeData expected returnd', function () {
+            var elem = document.body;
+            // store value with key return value
+            var dataValue = $.data(elem, "key", "keyvalue");
+            // retrieve stored value from key
+            var dataValue2 = $.data(elem, "key");
+            equal(dataValue, "keyvalue");
+            equal(dataValue2, "keyvalue");
+
+            $.removeData(elem, "key");
+            var complexObject = { test: "dataObjectValue" };
+            var complexValue = $.data(elem, complexObject);
+            deepEqual(complexValue, complexObject);
+        });
+
+        test('utility function-type', function () {
+            ok($.type([]), "array");
+            ok($.type({}), "object");
+            ok($.type("test"), "string");
+            ok($.type(3), "number");
+        });
+
+        test('utility function-isEmptyObject-any properties on object', function () {
+            ok($.isEmptyObject(""), 'empty string');
+            ok($.isEmptyObject({}), 'empty object');
+            ok($.isEmptyObject([]), 'empty array');
+            ok(!$.isEmptyObject({test:77}),'has properties')
+
+        });
+
+        test('utility function-isPlainObject-any properties on object instance', function () {
+            ok(!$.isPlainObject(""), 'not plain object');
+            ok($.isPlainObject({}), 'plain object');
+            ok(!$.isPlainObject([]), 'not plain array');
+            ok($.isPlainObject( { test: 77 }), 'has properties')
+
+        });
+
+
+        test('utility function-extend', function () {
+            var extendedObj = $.extend({ test: 12 }, { test2: 13 });
+            equal(extendedObj['test'], 12,'contains 12 from first object');
+            equal(extendedObj['test2'], 13, 'contains 13 from second object');
+
+            var extendedObj2 = $.extend({ test: { test3: 555 } }, { test2: 13 });
+            deepEqual(extendedObj2['test'], { test3: 555 }, "contains object from first object");
+        });
+
+        test('utility function-isFunction', function () {
+            var testFunc = {
+                func1: function (param) {
+                    return param;
+                }
+            };
+            
+            ok($.isFunction(testFunc.func1), "is a function");
+            ok(!$.isFunction(testFunc.func1()), "not a function");
+        });
+
+        test('utility function-makeArray', function () {
+            var objToArray = $.makeArray({ test: 1, test2: 2 });
+            equal($.type(objToArray), "array");
+        });
+
+        test('utility function-merge array', function () {
+            var objToArray = $.makeArray({ test: 1, test2: 2 });
+            var mergedArray = $.merge([2, 3], objToArray);
+            equal(mergedArray.length, 3);
+        });
+    });
+
+</script>

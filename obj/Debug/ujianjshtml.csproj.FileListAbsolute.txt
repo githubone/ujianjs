@@ -260,5 +260,4 @@ E:\program2\jshtml\cuba\ujianjshtml\ujianjshtml\ujianjshtml\bin\zh-Hans\System.S
 E:\program2\jshtml\cuba\ujianjshtml\ujianjshtml\ujianjshtml\bin\zh-Hant\System.Spatial.resources.dll
 E:\program2\jshtml\cuba\ujianjshtml\ujianjshtml\ujianjshtml\obj\Debug\ujianjshtml.dll
 E:\program2\jshtml\cuba\ujianjshtml\ujianjshtml\ujianjshtml\obj\Debug\ujianjshtml.pdb
-G:\program2\jshtml\cuba\ujianjshtml\ujianjshtml\ujianjshtml\obj\Debug\ujianjshtml.csprojResolveAssemblyReference.cache
 E:\program2\jshtml\cuba\ujianjshtml\ujianjshtml\ujianjshtml\obj\Debug\ujianjshtml.csprojResolveAssemblyReference.cache

@@ -39,6 +39,7 @@
                 }
             }
 
+
             var spy = sinon.spy();
             testclass.callbackfunc(spy);
             ok(spy.called,"spy acting as callback function should ne called")
@@ -61,6 +62,22 @@
             ok(spy.called, "spy acting as callback function should ne called");
             equal(returnvalue, 4, "should call real implementation if given a function to spy on");
 
+        });
+        
+        test('sinon-stub global environment', function () {
+
+            function getData(list, callback) {
+                jQuery.ajax({
+                    url: "/todo/"
+                });
+                    
+            }
+
+
+            sinon.stub(jQuery, "ajax");
+            jQuery.ajax("/url", {});
+
+            ok(jQuery.ajax.called);
         });
 
     });

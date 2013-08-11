@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_TestLayout.cshtml";
+}
+
+<style type="text/css">
+    div.ui-datepicker-header {
+        font-size: 12px;
+        font-family: georgia;
+    }
+
+    table.ui-datepicker-calendar {
+        font-size: 10px;
+        font-family: georgia;
+        font-style: italic;
+    }
+</style>
+
+<script>
+
+    $(function () {
+        module('jquey UI', {
+            setup: function () {
+
+
+            }
+        });
+
+        test('datepicker', function () {
+            var div = $('#testsandbox')
+            if (div) {
+                div.append('<input id="date" type="text" />');
+                $('#date').datepicker();
+            }
+        });
+    });
+</script>

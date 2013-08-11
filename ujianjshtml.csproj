@@ -1074,6 +1074,8 @@
     <Content Include="Views\Tests\PsFixCommonJqBugs.cshtml" />
     <Content Include="Views\Tests\Htmltest.cshtml" />
     <Content Include="Views\Tests\Sinontest.cshtml" />
+    <Content Include="Views\Tests\Jquerytest.cshtml" />
+    <Content Include="Views\Tests\JqueryUITest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

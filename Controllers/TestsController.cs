@@ -67,5 +67,20 @@ namespace ujianjshtml.Controllers
         }
 
 
+        /// <summary>
+        /// https://github.com/jquery/jquery/tree/master/test/unit
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Jquerytest()
+        {
+            return View();
+        }
+
+        public ActionResult JqueryUITest()
+        {
+            return View();
+        }
+
+
     }
 }
