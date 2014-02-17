@@ -2,6 +2,8 @@
     Layout = "_TestLayout.cshtml";
 }
 
+
+
 <script>
 
     module('html5 features', {
@@ -18,13 +20,11 @@
         ok(Modernizr.inputtypes.date, 'html 5 date supported');
         ok(Modernizr.inputtypes.email, 'html 5 email  supported');
         ok(Modernizr.inputtypes.search, 'html 5 search  supported');
-        // stop- check for attributes such as autofocus
-        //<input type="text" autufocus />
-
+        ok(Modernizr.geolocation, 'html5 geolcation supported');
         // test loading for non-supporting browser
-        Modernizr.load({
-            test: Modernizr.canvas,
-            nope: 'http://flashcanvas.net/bin/flashcanvas.js'
-        });
+        //Modernizr.load({
+        //    test: Modernizr.canvas,
+        //    nope: 'http://flashcanvas.net/bin/flashcanvas.js'
+        //});
     });
 </script>

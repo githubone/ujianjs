@@ -81,6 +81,11 @@ namespace ujianjshtml.Controllers
             return View();
         }
 
+        public  ActionResult StorageTest()
+        {
+            return View();
+        }
+
 
     }
 }

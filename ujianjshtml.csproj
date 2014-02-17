@@ -971,6 +971,7 @@
     <Content Include="plug-ins\snowflake.gif" />
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\app\logger.js" />
+    <Content Include="Scripts\app\misctest.js" />
     <Content Include="Scripts\app\sampleViewModel.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.min.js" />
@@ -1022,6 +1023,7 @@
     <Content Include="Scripts\tests\test.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore.min.js" />
+    <Content Include="test\readme.txt" />
     <Content Include="Views\Tests\data\testdata.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -1076,9 +1078,11 @@
     <Content Include="Views\Tests\Sinontest.cshtml" />
     <Content Include="Views\Tests\Jquerytest.cshtml" />
     <Content Include="Views\Tests\JqueryUITest.cshtml" />
+    <Content Include="Views\Tests\StorageTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="testscripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -1111,7 +1115,8 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!--  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />-->
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
